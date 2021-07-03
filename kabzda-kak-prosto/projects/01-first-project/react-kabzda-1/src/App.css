@@ -14,22 +14,3 @@
 }
 
 
-.header1{
-  grid-area: h; /* h- это псевдоним */
-  background-color: green;
-}
-.header1 img{
-  width:  60px;
-  height: 60px;
-}
-
-.nav1{
-  grid-area: n; /*n- это псевдоним*/
-  background-color: #deb887;
-}
-
-
-.content1{
-  grid-area: x; /*с- это псевдоним*/
-  background-color: cornflowerblue;
-}

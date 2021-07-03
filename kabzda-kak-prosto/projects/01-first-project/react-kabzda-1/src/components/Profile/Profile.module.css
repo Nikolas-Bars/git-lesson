@@ -1,0 +1,5 @@
+.content1{
+    grid-area: x; /*x- это псевдоним*/
+    background-color: cornflowerblue;
+}
+
