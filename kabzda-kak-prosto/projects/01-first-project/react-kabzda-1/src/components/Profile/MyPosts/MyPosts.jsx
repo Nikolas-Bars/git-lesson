@@ -4,10 +4,10 @@ import Post from "./Post/Post";
 const MyPosts = () =>{
     return (
             <div>
-                My posts
+                My posts<br/><br/>
                 <div>
-                    <textarea></textarea>
-                    <button>Add Post</button>
+                    <textarea></textarea><br/>
+                    <button>Add Post</button><br/><br/>
                 </div>
 
             <div className={s.posts}>
@@ -16,7 +16,7 @@ const MyPosts = () =>{
                 <Post likeCounts=' likes:15'/>
                 <Post likeCounts=' likes:14'/>
                 <Post likeCounts=' likes:31'/>
-                <Post />
+
 
             </div>
 </div>

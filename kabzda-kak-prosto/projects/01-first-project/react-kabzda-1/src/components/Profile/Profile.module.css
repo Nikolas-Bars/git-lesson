@@ -1,5 +1,9 @@
-.content1{
-    grid-area: x; /*x- это псевдоним*/
-    background-color: cornflowerblue;
+
+
+.img {
+    border-radius: 20px;
+}
+.img2{
+    width: 100px;
 }
 
