@@ -2,6 +2,8 @@
   margin: 0 auto; /* выравниваем посередине */
   display: grid;
   width: 1200px;
+    grid-gap: 3px;
+
 
   grid-template-areas:
   "h h"  /* тут указываем псевдонимы объявленные ниже *//* мы имеем одну КОЛОНКУ h n и вторую h с */
@@ -16,6 +18,7 @@
     grid-area: c;
     background-color: darkgrey;
     border-radius: 20px;
-    padding: 30px;
+
+
 }
 

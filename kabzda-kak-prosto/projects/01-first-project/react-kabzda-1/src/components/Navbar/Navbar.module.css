@@ -3,12 +3,15 @@
     grid-area: n; /*n- это псевдоним*/
     background-color: lightgray;
     border-radius: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 .item a{
+    font-size: 20px;
+    font-weight: bold;
     color: white;
     padding-top: 10px;
     padding-left: 20px;
+    text-decoration: none;
 }
 
 .item a.activeLink{

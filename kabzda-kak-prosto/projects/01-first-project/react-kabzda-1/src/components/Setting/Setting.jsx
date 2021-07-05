@@ -3,7 +3,7 @@ import s from './Setting.module.css'
 
 const Setting = (props) => {
     return (
-        <div>
+        <div className={s.setting}>
             <p>Настройки Вашей страницы. Выберите нужный пункт.</p>
             <ul>
                 <li><a href='#' className={s.a_setting}>Изменить личные данные</a></li>
