@@ -2,17 +2,11 @@ import React from 'react';
 import s from "./MyPosts.module.css"
 import Post from "./Post/Post";
 
-const MyPosts = () => {
-    let posts = [
-        {id: '1', message: 'Hi! How are you?', likeCounts:' likes: 25'},
-        {id: '1', message: 'It`s my first post.', likeCounts:' likes: 12'},
-        {id: '1', message: 'Hi! How are you?', likeCounts:' likes: 38'},
-        {id: '1', message: 'Hi! How are you?', likeCounts:' likes: 11'},
-        {id: '1', message: 'Hi! How are you?', likeCounts:' likes: 7'}
+const MyPosts = (props) => {             /*в пропсе массив posts который прошел через index - app - profile*/
 
-    ]
 
-    let postsElement = posts.map(p => <Post message={p.message} likeCounts={p.likeCounts} />)
+    let postsElement =
+        props.posts.map(p => <Post message={p.message} likeCounts={p.likeCounts} />)
 
     return (
         <div className={s.postsBlock}>

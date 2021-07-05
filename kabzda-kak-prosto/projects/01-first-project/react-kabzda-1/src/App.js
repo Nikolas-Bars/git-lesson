@@ -11,7 +11,9 @@ import {BrowserRouter, Route} from "react-router-dom";
 import Setting from "./components/Setting/Setting";
 
 
-const App = () => {
+const App = (props) => {
+
+
     return (
         <BrowserRouter>
             <div className="app-wrapper">
@@ -20,7 +22,7 @@ const App = () => {
                 <div className='app-wrapper-content'>
                     <Route path='/dialogs' component={Dialogs}/> {/*path='/dialogs' читает какой url отображается в браузере.
             Если URL в браузере - dialogs, то он рисует компоненту Dialogs*/}
-                    <Route path='/profile' component={Profile}/>
+                    <Route path='/profile' render={ () => <Profile posts={props.posts}/>}/> /*передаем в Profile в props массив posts, который сейчас в index.js*/
                     <Route path='/news' component={News} />
                     <Route path='/music' component={Music} />
                     <Route path='/setting' component={Setting} />
