@@ -5,11 +5,10 @@ import ProfileInfo from "./Profile info/ProfileInfo";
 
 const Profile = (props) => {
 
-
-    return (
+ return (
         <div className={s.profile}>
             <ProfileInfo/>
-            <MyPosts posts={props.posts}/> /*передаем в props MyPosts массив posts*/
+            <MyPosts posts={props.state.posts}/> {/*передаем в props MyPosts массив posts*/}
         </div>
     );
 }

@@ -3,18 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import state from "./redux/state"
 
-let posts = [
-    {id: '1', message: 'Hi! How are you?', likeCounts:' likes: 25'},
-    {id: '1', message: 'It`s my first post.', likeCounts:' likes: 12'},
-    {id: '1', message: 'Hi! How are you?', likeCounts:' likes: 38'},
-    {id: '1', message: 'Hi! How are you?', likeCounts:' likes: 11'},
-    {id: '1', message: 'Hi! How are you?', likeCounts:' likes: 7'}
-]
 
 ReactDOM.render(
   <React.StrictMode>
-    <App posts={posts}/> /*передаем APP props posts*/
+    <App state={state} /> {/*передаем APP массив с данными state*/}
   </React.StrictMode>,
   document.getElementById('root')
 );

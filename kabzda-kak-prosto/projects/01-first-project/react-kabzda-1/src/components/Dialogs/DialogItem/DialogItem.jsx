@@ -5,10 +5,11 @@ import {NavLink} from "react-router-dom";
 const DialogItem = (props) => {
     return (
         <div className={s.dialog + " " + s.active}>
-            <NavLink to={'/dialogs/' + props.id} className={s.dialog}>{props.name}</NavLink>
+
+            {props.img}  <NavLink to={'/dialogs/' + props.id} className={s.dialog}>{props.name}</NavLink>
         </div>
     )
 }
 
 
-export default DialogItem;
+export default DialogItem

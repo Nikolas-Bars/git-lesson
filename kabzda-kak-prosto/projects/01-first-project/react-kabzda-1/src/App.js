@@ -9,6 +9,7 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import {BrowserRouter, Route} from "react-router-dom";
 import Setting from "./components/Setting/Setting";
+import Friends from "./components/Navbar/Friends/Friends";
 
 
 const App = (props) => {
@@ -19,13 +20,13 @@ const App = (props) => {
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
+                <Friends />
                 <div className='app-wrapper-content'>
-                    <Route path='/dialogs' component={Dialogs}/> {/*path='/dialogs' читает какой url отображается в браузере.
-            Если URL в браузере - dialogs, то он рисует компоненту Dialogs*/}
-                    <Route path='/profile' render={ () => <Profile posts={props.posts}/>}/> /*передаем в Profile в props массив posts, который сейчас в index.js*/
-                    <Route path='/news' component={News} />
-                    <Route path='/music' component={Music} />
-                    <Route path='/setting' component={Setting} />
+                    <Route path='/dialogs' render={() => <Dialogs state={props.state.dialogsPage} />}/>        {/*path='/dialogs' читает какой url отображается в браузере.  Если URL в браузере - dialogs, то он рисует компоненту Dialogs*/}
+                    <Route path='/profile' render={() => <Profile state={props.state.profilePage}/>}/> {/*передаем в Profile в props массив posts, который сейчас в index.js*/}
+                    <Route path='/news' component={News}/>
+                    <Route path='/music' component={Music}/>
+                    <Route path='/setting' component={Setting}/>
                 </div>
                 {/*<Profile />*/}
             </div>
