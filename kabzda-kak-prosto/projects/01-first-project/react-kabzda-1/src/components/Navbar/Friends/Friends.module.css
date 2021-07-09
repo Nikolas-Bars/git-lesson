@@ -1,8 +1,10 @@
 
 .friends{
     grid-area: z; /*n- это псевдоним*/
-    background-color: lightgray;
+    background-color: green;
     border-top: 3px solid purple;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     padding: 20px;
 
 }

@@ -1,8 +1,9 @@
 
 .nav1{
     grid-area: n; /*n- это псевдоним*/
-    background-color: lightgray;
-    border-top-radius: 20px;
+    background-color: blue;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     padding: 20px;
 
 

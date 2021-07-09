@@ -3,6 +3,8 @@ import s from './Dialogs.module.css'
 import {NavLink} from "react-router-dom"; //NavLink у нас в файле DialogItem
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
+import MessageInput from "./Message/MessageInput"
+import {upMessageForDialogPage} from "../../redux/state";
 
 
 const Dialogs = (props) => {
@@ -22,6 +24,9 @@ const Dialogs = (props) => {
             <div className={s.messages}>
                 {messagesElement}
             </div>
+            <MessageInput newMessageInTextArea={props.newMessageInTextArea}
+                            upNewMessageInTextArea={props.upNewMessageInTextArea}
+                          upMessageForDialogPage={props.upMessageForDialogPage}/>
 
         </div>
     )

@@ -10,6 +10,8 @@ import Music from "./components/Music/Music";
 import {BrowserRouter, Route} from "react-router-dom";
 import Setting from "./components/Setting/Setting";
 import Friends from "./components/Navbar/Friends/Friends";
+import {addPost, upMessageForDialogPage} from "./redux/state";
+import {upText} from "./redux/state";
 
 
 const App = (props) => {
@@ -22,10 +24,14 @@ const App = (props) => {
                 <Navbar/>
                 <Friends />
                 <div className='app-wrapper-content'>
-                    <Route path='/dialogs' render={() => <Dialogs state={props.state.dialogsPage} />}/>        {/*path='/dialogs' читает какой url отображается в браузере.  Если URL в браузере - dialogs, то он рисует компоненту Dialogs*/}
-                    <Route path='/profile' render={() => <Profile state={props.state.profilePage}/>}/> {/*передаем в Profile в props массив posts, который сейчас в index.js*/}
+                    <Route path='/dialogs' render={() => <Dialogs state={props.state.dialogsPage}
+                                                                  newMessageInTextArea={props.newMessageInTextArea}
+                                                                  upNewMessageInTextArea={props.upNewMessageInTextArea}
+                                                                  upMessageForDialogPage={props.upMessageForDialogPage}
+                    />}/>        {/*path='/dialogs' читает какой url отображается в браузере.  Если URL в браузере - dialogs, то он рисует компоненту Dialogs*/}
+                    <Route path='/profile' render={() => <Profile upText={props.upText} state={props.state.profilePage}  addPost={props.addPost} />}/> {/*передаем в Profile в props массив posts, который сейчас в index.js*/}
                     <Route path='/news' component={News}/>
-                    <Route path='/music' component={Music}/>
+                    <Route path='/music' render={ () => <Music addComposition={props.addComposition}/>}/>
                     <Route path='/setting' component={Setting}/>
                 </div>
                 {/*<Profile />*/}
